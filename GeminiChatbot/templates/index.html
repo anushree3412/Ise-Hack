@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gemini 2.0 Flash Chatbot</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    #chatbox { max-width: 600px; margin: auto; }
+    .message { margin: 10px 0; }
+    .user { font-weight: bold; }
+    .bot { color: #3333cc; }
+    input, button { padding: 10px; width: 80%; }
+    button { width: 15%; }
+  </style>
+</head>
+<body>
+  <div id="chatbox">
+    <h2>🤖 Gemini 2.0 Flash Chat</h2>
+    <div id="messages"></div>
+    <input type="text" id="userInput" placeholder="Type your message..." />
+    <button onclick="sendMessage()">Send</button>
+  </div>
+
+  <script>
+    function sendMessage() {
+      const userText = document.getElementById("userInput").value;
+      if (!userText) return;
+
+      const msgBox = document.getElementById("messages");
+      msgBox.innerHTML += `<div class="message user">You: ${userText}</div>`;
+
+      fetch("/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: userText })
+      })
+      .then(res => res.json())
+      .then(data => {
+        msgBox.innerHTML += `<div class="message bot">Bot: ${data.response}</div>`;
+        document.getElementById("userInput").value = "";
+        msgBox.scrollTop = msgBox.scrollHeight;
+      });
+    }
+  </script>
+</body>
+</html>
