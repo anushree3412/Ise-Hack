@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Symptom Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="vitals.html">Vitals</a>
+    <a href="symptoms.html">Symptoms</a>
+    <a href="allergies.html">Allergies</a>
+    <a href="wellness.html">Wellness</a>
+    <a href="http://127.0.0.1:8000/">Chatbot</a>
+</div>
+
+<h1>Symptom Analyzer</h1>
+
+<div class="container">
+
+    <h2>Select Symptoms</h2>
+
+    <div class="section">
+        <label><input type="checkbox" class="sym" value="fever"> Fever</label>
+        <label><input type="checkbox" class="sym" value="cough"> Cough</label>
+        <label><input type="checkbox" class="sym" value="headache"> Headache</label>
+        <label><input type="checkbox" class="sym" value="fatigue"> Fatigue</label>
+        <label><input type="checkbox" class="sym" value="acidity"> Acidity</label>
+        <label><input type="checkbox" class="sym" value="dizziness"> Dizziness</label>
+        <label><input type="checkbox" class="sym" value="chest"> Chest Tightness</label>
+    </div>
+
+    <button onclick="checkSymptoms()">Analyze Symptoms</button>
+
+    <div id="symptomResult" class="result-box"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

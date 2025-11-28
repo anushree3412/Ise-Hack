@@ -1,0 +1,41 @@
+.<!DOCTYPE html>
+<html>
+<head>
+    <title>Wellness Advisor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="vitals.html">Vitals</a>
+    <a href="symptoms.html">Symptoms</a>
+    <a href="allergies.html">Allergies</a>
+    <a href="wellness.html">Wellness</a>
+    <a href="http://127.0.0.1:8000/">Chatbot</a>
+</div>
+
+<h1>Wellness Advisor</h1>
+
+<div class="container">
+
+    <label>Water Intake (glasses/day): <input id="water" type="number"></label>
+    <label>Sleep Hours: <input id="sleep" type="number"></label>
+
+    <button onclick="checkWellness()">Check Wellness</button>
+
+    <div id="wellnessResult" class="result-box"></div>
+
+    <div class="score-box">
+        <h3>Health Score: <span id="scoreNum">0</span>/100</h3>
+        <div class="score-bar">
+            <div id="scoreFill"></div>
+        </div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

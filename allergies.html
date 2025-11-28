@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Allergy Detector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="vitals.html">Vitals</a>
+    <a href="symptoms.html">Symptoms</a>
+    <a href="allergies.html">Allergies</a>
+    <a href="wellness.html">Wellness</a>
+    <a href="http://127.0.0.1:8000/">Chatbot</a>
+
+</div>
+
+<h1>Micro-Allergy Detector</h1>
+
+<div class="container">
+
+    <h3>Food Triggers</h3>
+    <label><input type="checkbox" class="food" value="milk"> Milk</label>
+    <label><input type="checkbox" class="food" value="nuts"> Nuts</label>
+    <label><input type="checkbox" class="food" value="eggs"> Eggs</label>
+
+    <h3>Environment</h3>
+    <label>Pollen Level:
+        <select id="pollen">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select>
+    </label>
+    <label>Dust Exposure:
+        <select id="dust">
+            <option value="no">No</option>
+            <option value="yes">Yes</option>
+        </select>
+    </label>
+
+    <h3>Skin Symptoms</h3>
+    <label><input type="checkbox" class="skin" value="rash"> Rash</label>
+    <label><input type="checkbox" class="skin" value="itching"> Itching</label>
+    <label><input type="checkbox" class="skin" value="swelling"> Swelling</label>
+
+    <h3>Respiratory</h3>
+    <label><input type="checkbox" class="resp" value="sneeze"> Sneezing</label>
+    <label><input type="checkbox" class="resp" value="breath"> Breathlessness</label>
+
+    <button onclick="checkAllergy()">Check Allergy</button>
+
+    <div id="allergyResult" class="result-box"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

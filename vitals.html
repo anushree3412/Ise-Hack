@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vitals Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="vitals.html">Vitals</a>
+    <a href="symptoms.html">Symptoms</a>
+    <a href="allergies.html">Allergies</a>
+    <a href="wellness.html">Wellness</a>
+    <a href="http://127.0.0.1:8000/">Chatbot</a>
+</div>
+
+<h1>Vitals Checker</h1>
+
+<div class="container">
+    <label>Heart Rate (bpm): <input id="hr" type="number"></label><br><br>
+    <label>Temperature (°C): <input id="temp" type="number"></label><br><br>
+    <label>Systolic BP: <input id="bp" type="number"></label><br><br>
+
+    <button onclick="checkVitals()">Check Vitals</button>
+
+    <div id="vitalsResult" class="result-box"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
